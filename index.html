@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BilliCouch – Gauč, ktorý sa mení na biliardový stôl</title>
+  <meta name="description" content="BilliCouch – revolučný gauč, ktorý sa v priebehu sekúnd premení na plnohodnotný biliardový stôl. Dizajn. Zábava. Inovácia." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ======================== NAVIGATION ======================== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">⬡</span>
+        BilliCouch
+      </a>
+      <ul class="nav__links">
+        <li><a href="#features">Funkcie</a></li>
+        <li><a href="#how-it-works">Ako to funguje</a></li>
+        <li><a href="#specs">Parametre</a></li>
+        <li><a href="#gallery">Galéria</a></li>
+        <li><a href="#contact" class="nav__cta">Predobjednať</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Otvoriť menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#features" class="mobile-link">Funkcie</a></li>
+      <li><a href="#how-it-works" class="mobile-link">Ako to funguje</a></li>
+      <li><a href="#specs" class="mobile-link">Parametre</a></li>
+      <li><a href="#gallery" class="mobile-link">Galéria</a></li>
+      <li><a href="#contact" class="mobile-link">Predobjednať</a></li>
+    </ul>
+  </div>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__gradient"></div>
+      <div class="hero__particles" id="particles"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal-up">Revolučný nábytok</p>
+      <h1 class="hero__title reveal-up">
+        Gauč.<br />
+        <span class="hero__title--accent">Biliardový stôl.</span><br />
+        Jedno zariadenie.
+      </h1>
+      <p class="hero__subtitle reveal-up">
+        BilliCouch spája luxusný pohodlný gauč s plnohodnotným biliardovým stolom.
+        Transformácia trvá menej ako 30 sekúnd.
+      </p>
+      <div class="hero__actions reveal-up">
+        <a href="#contact" class="btn btn--primary">Predobjednať teraz</a>
+        <a href="#how-it-works" class="btn btn--ghost">Pozrieť ako funguje</a>
+      </div>
+    </div>
+    <div class="hero__visual" id="heroVisual">
+      <div class="hero__product">
+        <div class="product-art" id="productArt">
+          <!-- Couch SVG Art -->
+          <div class="product-art__couch" id="couchArt">
+            <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+              <!-- Couch body -->
+              <rect x="60" y="150" width="480" height="120" rx="20" fill="url(#couchGrad)" />
+              <!-- Cushions -->
+              <rect x="75" y="130" width="210" height="90" rx="15" fill="url(#cushionGrad)" />
+              <rect x="315" y="130" width="210" height="90" rx="15" fill="url(#cushionGrad)" />
+              <!-- Backrest -->
+              <rect x="60" y="60" width="480" height="85" rx="15" fill="url(#backGrad)" />
+              <!-- Armrests -->
+              <rect x="20" y="110" width="60" height="120" rx="12" fill="url(#armGrad)" />
+              <rect x="520" y="110" width="60" height="120" rx="12" fill="url(#armGrad)" />
+              <!-- Legs -->
+              <rect x="80" y="265" width="20" height="40" rx="5" fill="#1a1a2e" />
+              <rect x="200" y="265" width="20" height="40" rx="5" fill="#1a1a2e" />
+              <rect x="380" y="265" width="20" height="40" rx="5" fill="#1a1a2e" />
+              <rect x="500" y="265" width="20" height="40" rx="5" fill="#1a1a2e" />
+              <!-- Decorative lines -->
+              <line x1="300" y1="130" x2="300" y2="145" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+              <defs>
+                <linearGradient id="couchGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#2d4a7a"/>
+                  <stop offset="100%" stop-color="#1a2d4a"/>
+                </linearGradient>
+                <linearGradient id="cushionGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#3a5c94"/>
+                  <stop offset="100%" stop-color="#2d4a7a"/>
+                </linearGradient>
+                <linearGradient id="backGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#2a3f6e"/>
+                  <stop offset="100%" stop-color="#1e2f5a"/>
+                </linearGradient>
+                <linearGradient id="armGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#2d4a7a"/>
+                  <stop offset="100%" stop-color="#3a5c94"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <!-- Billiard Table SVG Art -->
+          <div class="product-art__billiard" id="billiardArt">
+            <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+              <!-- Table surface -->
+              <rect x="40" y="80" width="520" height="180" rx="15" fill="url(#tableGrad)" />
+              <!-- Green felt -->
+              <rect x="60" y="100" width="480" height="140" rx="8" fill="url(#feltGrad)" />
+              <!-- Rails -->
+              <rect x="40" y="80" width="520" height="20" rx="8" fill="url(#railGrad)" />
+              <rect x="40" y="240" width="520" height="20" rx="8" fill="url(#railGrad)" />
+              <rect x="40" y="80" width="20" height="180" rx="8" fill="url(#railGrad)" />
+              <rect x="540" y="80" width="20" height="180" rx="8" fill="url(#railGrad)" />
+              <!-- Pockets -->
+              <circle cx="62" cy="102" r="12" fill="#0a0a0a"/>
+              <circle cx="300" cy="90" r="10" fill="#0a0a0a"/>
+              <circle cx="538" cy="102" r="12" fill="#0a0a0a"/>
+              <circle cx="62" cy="248" r="12" fill="#0a0a0a"/>
+              <circle cx="300" cy="252" r="10" fill="#0a0a0a"/>
+              <circle cx="538" cy="248" r="12" fill="#0a0a0a"/>
+              <!-- Balls -->
+              <circle cx="420" cy="170" r="12" fill="url(#ballWhite)" opacity="0.9"/>
+              <circle cx="220" cy="155" r="12" fill="url(#ball1)"/>
+              <circle cx="245" cy="155" r="12" fill="url(#ball2)"/>
+              <circle cx="232" cy="137" r="12" fill="url(#ball3)"/>
+              <circle cx="207" cy="137" r="12" fill="url(#ball4)"/>
+              <circle cx="257" cy="137" r="12" fill="url(#ball5)"/>
+              <!-- Cue line -->
+              <line x1="420" y1="170" x2="560" y2="125" stroke="url(#cueGrad)" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+              <!-- Table legs -->
+              <rect x="70" y="260" width="18" height="45" rx="5" fill="#1a1a2e"/>
+              <rect x="512" y="260" width="18" height="45" rx="5" fill="#1a1a2e"/>
+              <defs>
+                <linearGradient id="tableGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#5c3a1e"/>
+                  <stop offset="100%" stop-color="#3d2710"/>
+                </linearGradient>
+                <linearGradient id="feltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1a7a3c"/>
+                  <stop offset="100%" stop-color="#145e2e"/>
+                </linearGradient>
+                <linearGradient id="railGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#6b4424"/>
+                  <stop offset="100%" stop-color="#4a2f17"/>
+                </linearGradient>
+                <radialGradient id="ballWhite" cx="35%" cy="35%">
+                  <stop offset="0%" stop-color="#ffffff"/>
+                  <stop offset="100%" stop-color="#cccccc"/>
+                </radialGradient>
+                <radialGradient id="ball1" cx="35%" cy="35%">
+                  <stop offset="0%" stop-color="#ffdd44"/>
+                  <stop offset="100%" stop-color="#cc9900"/>
+                </radialGradient>
+                <radialGradient id="ball2" cx="35%" cy="35%">
+                  <stop offset="0%" stop-color="#dd2222"/>
+                  <stop offset="100%" stop-color="#991111"/>
+                </radialGradient>
+                <radialGradient id="ball3" cx="35%" cy="35%">
+                  <stop offset="0%" stop-color="#2244dd"/>
+                  <stop offset="100%" stop-color="#1133aa"/>
+                </radialGradient>
+                <radialGradient id="ball4" cx="35%" cy="35%">
+                  <stop offset="0%" stop-color="#9922cc"/>
+                  <stop offset="100%" stop-color="#661199"/>
+                </radialGradient>
+                <radialGradient id="ball5" cx="35%" cy="35%">
+                  <stop offset="0%" stop-color="#ff6600"/>
+                  <stop offset="100%" stop-color="#cc4400"/>
+                </radialGradient>
+                <linearGradient id="cueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#d4a553"/>
+                  <stop offset="100%" stop-color="#8b6914"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="hero__toggle-hint">
+          <span class="toggle-dot active" data-mode="couch"></span>
+          <span class="toggle-dot" data-mode="billiard"></span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator">
+      <span>Scrollujte nadol</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ======================== SCROLL TRANSFORM ======================== -->
+  <section class="transform-section" id="transformSection">
+    <div class="transform-section__sticky">
+      <div class="transform-section__progress" id="transformProgress">
+        <div class="transform-section__bar"></div>
+      </div>
+      <div class="transform-section__content">
+        <div class="transform-stage" id="stage1" data-stage="1">
+          <div class="transform-stage__visual">
+            <div class="stage-icon stage-icon--couch">🛋️</div>
+          </div>
+          <div class="transform-stage__text">
+            <span class="stage-label">Krok 1</span>
+            <h2>Pohodlný gauč</h2>
+            <p>Začnite deň v maximálnom komforte. Ergonomické sedenie s luxusným čalúnením vytvárajú dokonalý relax priestor pre celú rodinu.</p>
+          </div>
+        </div>
+        <div class="transform-stage hidden" id="stage2" data-stage="2">
+          <div class="transform-stage__visual">
+            <div class="stage-icon stage-icon--transform">🔄</div>
+          </div>
+          <div class="transform-stage__text">
+            <span class="stage-label">Krok 2</span>
+            <h2>Transformácia</h2>
+            <p>Jediným pohybom sklopte operadlo a vyklopte hrací povrch. Patentovaný mechanizmus zaisťuje plynulú premenu bez nástrojov.</p>
+          </div>
+        </div>
+        <div class="transform-stage hidden" id="stage3" data-stage="3">
+          <div class="transform-stage__visual">
+            <div class="stage-icon stage-icon--billiard">🎱</div>
+          </div>
+          <div class="transform-stage__text">
+            <span class="stage-label">Krok 3</span>
+            <h2>Biliardový stôl</h2>
+            <p>Kompletný profesionálny biliardový stôl s rozmermi 210×110 cm, kvalitným plstením a presnou rovinou hracia plocha. Hrajte ako profesionál.</p>
+          </div>
+        </div>
+      </div>
+      <div class="transform-section__steps">
+        <button class="step-btn active" data-step="1">1</button>
+        <div class="step-line"></div>
+        <button class="step-btn" data-step="2">2</button>
+        <div class="step-line"></div>
+        <button class="step-btn" data-step="3">3</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FEATURES ======================== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Prečo BilliCouch?</p>
+        <h2 class="section-title">Navrhnuté pre moderný život</h2>
+        <p class="section-subtitle">Každý detail bol premyslený tak, aby vám priniesol maximálny zážitok.</p>
+      </div>
+      <div class="features__grid">
+        <div class="feature-card reveal-card">
+          <div class="feature-card__icon">⚡</div>
+          <h3>30-sekundová transformácia</h3>
+          <p>Patentovaný mechanizmus umožňuje premenu z gauča na biliardový stôl za menej ako 30 sekúnd – bez nástrojov, bez komplikácií.</p>
+        </div>
+        <div class="feature-card reveal-card">
+          <div class="feature-card__icon">🎨</div>
+          <h3>Dizajnový nábytok</h3>
+          <p>Navrhnuté spolupracou s poprednými dizajnérmi. BilliCouch je elegantný doplnok do každej modernej obývačky.</p>
+        </div>
+        <div class="feature-card reveal-card">
+          <div class="feature-card__icon">🏆</div>
+          <h3>Profesionálna kvalita</h3>
+          <p>Hracia plocha spĺňa štandardy profesionálneho biliardového stola – presná rovnosť, kvalitné plstenie, pevné mantinely.</p>
+        </div>
+        <div class="feature-card reveal-card">
+          <div class="feature-card__icon">🛡️</div>
+          <h3>Bezpečné pre rodinu</h3>
+          <p>Zaoblené hrany, bezpečnostné zámky a mäkké povrchy. Certifikovaná bezpečnosť pre domácnosti s deťmi.</p>
+        </div>
+        <div class="feature-card reveal-card">
+          <div class="feature-card__icon">🌿</div>
+          <h3>Udržateľné materiály</h3>
+          <p>Telo z FSC certifikovaného dreva, recyklované kovové komponenty a ekologické čalúnenie bez škodlivých látok.</p>
+        </div>
+        <div class="feature-card reveal-card">
+          <div class="feature-card__icon">🔧</div>
+          <h3>Jednoduchá montáž</h3>
+          <p>Dodáme priamo domov a zostavíme za vás. Servisná sieť po celom Slovensku a záruka 5 rokov.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== HOW IT WORKS ======================== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Ako to funguje</p>
+        <h2 class="section-title">Premena v troch krokoch</h2>
+      </div>
+      <div class="steps-timeline">
+        <div class="timeline-step reveal-left">
+          <div class="timeline-step__number">01</div>
+          <div class="timeline-step__content">
+            <h3>Uvoľnite západky</h3>
+            <p>Na bočných stranách gauča sa nachádzajú dve ergonomické páčky. Jemným povytiahnusom uvoľníte mechanizmus transformácie.</p>
+          </div>
+          <div class="timeline-step__visual">
+            <div class="step-visual step-visual--1">
+              <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="60" width="160" height="70" rx="10" fill="url(#sv1a)" opacity="0.9"/>
+                <rect x="30" y="50" width="65" height="50" rx="8" fill="url(#sv1b)"/>
+                <rect x="105" y="50" width="65" height="50" rx="8" fill="url(#sv1b)"/>
+                <rect x="15" y="75" width="25" height="45" rx="8" fill="url(#sv1c)"/>
+                <rect x="160" y="75" width="25" height="45" rx="8" fill="url(#sv1c)"/>
+                <circle cx="15" cy="80" r="6" fill="#e74c3c" class="pulse-dot"/>
+                <circle cx="185" cy="80" r="6" fill="#e74c3c" class="pulse-dot"/>
+                <defs>
+                  <linearGradient id="sv1a" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#2d4a7a"/><stop offset="100%" stop-color="#1a2d4a"/></linearGradient>
+                  <linearGradient id="sv1b" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#3a5c94"/><stop offset="100%" stop-color="#2d4a7a"/></linearGradient>
+                  <linearGradient id="sv1c" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2d4a7a"/><stop offset="100%" stop-color="#3a5c94"/></linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal-right">
+          <div class="timeline-step__number">02</div>
+          <div class="timeline-step__content">
+            <h3>Sklopte operadlo</h3>
+            <p>Operadlo sa plynulo presunie dopredu a splynie so sedadlom. Súčasne sa dvíha hracia plocha ukrytá v bočných paneloch gauča.</p>
+          </div>
+          <div class="timeline-step__visual">
+            <div class="step-visual step-visual--2">
+              <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                <!-- Mid-transform state -->
+                <rect x="20" y="80" width="160" height="55" rx="10" fill="url(#sv2a)" opacity="0.9"/>
+                <rect x="20" y="35" width="160" height="50" rx="8" fill="url(#sv2b)" transform="rotate(-15 100 60)"/>
+                <rect x="15" y="75" width="25" height="55" rx="8" fill="url(#sv2c)"/>
+                <rect x="160" y="75" width="25" height="55" rx="8" fill="url(#sv2c)"/>
+                <!-- Arrow indicating motion -->
+                <path d="M100 30 L100 60 L90 50 M100 60 L110 50" stroke="#4ecdc4" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                  <linearGradient id="sv2a" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#2d4a7a"/><stop offset="100%" stop-color="#1a2d4a"/></linearGradient>
+                  <linearGradient id="sv2b" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1a7a3c"/><stop offset="100%" stop-color="#145e2e"/></linearGradient>
+                  <linearGradient id="sv2c" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#5c3a1e"/><stop offset="100%" stop-color="#3d2710"/></linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-step reveal-left">
+          <div class="timeline-step__number">03</div>
+          <div class="timeline-step__content">
+            <h3>Zaistite a hrajte</h3>
+            <p>Hracia plocha sa automaticky uloví do finálnej polohy. Zaznie kliknutie – to je signál, že BilliCouch je pripravený na hru.</p>
+          </div>
+          <div class="timeline-step__visual">
+            <div class="step-visual step-visual--3">
+              <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                <!-- Billiard table small -->
+                <rect x="15" y="40" width="170" height="90" rx="8" fill="url(#sv3a)"/>
+                <rect x="25" y="50" width="150" height="70" rx="5" fill="url(#sv3b)"/>
+                <rect x="15" y="40" width="170" height="12" rx="5" fill="url(#sv3c)"/>
+                <rect x="15" y="118" width="170" height="12" rx="5" fill="url(#sv3c)"/>
+                <circle cx="27" cy="52" r="7" fill="#0a0a0a"/>
+                <circle cx="100" cy="44" r="6" fill="#0a0a0a"/>
+                <circle cx="173" cy="52" r="7" fill="#0a0a0a"/>
+                <circle cx="27" cy="118" r="7" fill="#0a0a0a"/>
+                <circle cx="100" cy="126" r="6" fill="#0a0a0a"/>
+                <circle cx="173" cy="118" r="7" fill="#0a0a0a"/>
+                <circle cx="130" cy="85" r="7" fill="white" opacity="0.9"/>
+                <circle cx="75" cy="78" r="7" fill="#ffdd44"/>
+                <circle cx="92" cy="78" r="7" fill="#dd2222"/>
+                <circle cx="83" cy="65" r="7" fill="#2244dd"/>
+                <defs>
+                  <linearGradient id="sv3a" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#5c3a1e"/><stop offset="100%" stop-color="#3d2710"/></linearGradient>
+                  <linearGradient id="sv3b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a7a3c"/><stop offset="100%" stop-color="#145e2e"/></linearGradient>
+                  <linearGradient id="sv3c" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#6b4424"/><stop offset="100%" stop-color="#4a2f17"/></linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SPECS ======================== -->
+  <section class="specs" id="specs">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Technické parametre</p>
+        <h2 class="section-title">Precízne navrhnuté</h2>
+      </div>
+      <div class="specs__layout">
+        <div class="specs__visual reveal-up">
+          <div class="specs-diagram">
+            <svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
+              <!-- Billiard table view from above -->
+              <rect x="50" y="60" width="400" height="230" rx="15" fill="url(#diagBorder)" stroke="rgba(100,200,150,0.3)" stroke-width="1"/>
+              <rect x="70" y="80" width="360" height="190" rx="8" fill="url(#diagFelt)"/>
+              <!-- Measurement lines -->
+              <line x1="50" y1="320" x2="450" y2="320" stroke="#4ecdc4" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)" opacity="0.8"/>
+              <text x="250" y="340" text-anchor="middle" fill="#4ecdc4" font-size="13" font-family="Inter, sans-serif">210 cm</text>
+              <line x1="470" y1="60" x2="470" y2="290" stroke="#4ecdc4" stroke-width="1.5" opacity="0.8"/>
+              <text x="490" y="180" text-anchor="middle" fill="#4ecdc4" font-size="13" font-family="Inter, sans-serif" transform="rotate(90 490 180)">110 cm</text>
+              <!-- Pockets top-view -->
+              <circle cx="72" cy="82" r="11" fill="#0d0d0d" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <circle cx="250" cy="72" r="9" fill="#0d0d0d" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <circle cx="428" cy="82" r="11" fill="#0d0d0d" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <circle cx="72" cy="268" r="11" fill="#0d0d0d" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <circle cx="250" cy="278" r="9" fill="#0d0d0d" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <circle cx="428" cy="268" r="11" fill="#0d0d0d" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+              <!-- Balls -->
+              <circle cx="340" cy="175" r="10" fill="white" opacity="0.9"/>
+              <circle cx="170" cy="160" r="10" fill="url(#db1)"/>
+              <circle cx="195" cy="160" r="10" fill="url(#db2)"/>
+              <circle cx="183" cy="142" r="10" fill="url(#db3)"/>
+              <circle cx="158" cy="142" r="10" fill="url(#db4)"/>
+              <circle cx="208" cy="142" r="10" fill="url(#db5)"/>
+              <circle cx="183" cy="123" r="10" fill="url(#db6)"/>
+              <circle cx="158" cy="123" r="10" fill="url(#db7)"/>
+              <circle cx="208" cy="123" r="10" fill="url(#db8)"/>
+              <circle cx="133" cy="123" r="10" fill="url(#db9)"/>
+              <circle cx="233" cy="123" r="10" fill="url(#db10)"/>
+              <defs>
+                <linearGradient id="diagBorder" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#3d2710"/><stop offset="100%" stop-color="#2a1a0a"/></linearGradient>
+                <linearGradient id="diagFelt" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a7a3c"/><stop offset="100%" stop-color="#0d4a22"/></linearGradient>
+                <radialGradient id="db1" cx="35%" cy="35%"><stop offset="0%" stop-color="#ffee22"/><stop offset="100%" stop-color="#cc8800"/></radialGradient>
+                <radialGradient id="db2" cx="35%" cy="35%"><stop offset="0%" stop-color="#ee2222"/><stop offset="100%" stop-color="#990000"/></radialGradient>
+                <radialGradient id="db3" cx="35%" cy="35%"><stop offset="0%" stop-color="#2233ee"/><stop offset="100%" stop-color="#001199"/></radialGradient>
+                <radialGradient id="db4" cx="35%" cy="35%"><stop offset="0%" stop-color="#9911bb"/><stop offset="100%" stop-color="#550077"/></radialGradient>
+                <radialGradient id="db5" cx="35%" cy="35%"><stop offset="0%" stop-color="#ee6600"/><stop offset="100%" stop-color="#993300"/></radialGradient>
+                <radialGradient id="db6" cx="35%" cy="35%"><stop offset="0%" stop-color="#116622"/><stop offset="100%" stop-color="#003311"/></radialGradient>
+                <radialGradient id="db7" cx="35%" cy="35%"><stop offset="0%" stop-color="#883311"/><stop offset="100%" stop-color="#441100"/></radialGradient>
+                <radialGradient id="db8" cx="35%" cy="35%"><stop offset="0%" stop-color="#111111"/><stop offset="100%" stop-color="#000000"/></radialGradient>
+                <radialGradient id="db9" cx="35%" cy="35%"><stop offset="0%" stop-color="#ffee22"/><stop offset="70%" stop-color="#ffee22"/><stop offset="70.1%" stop-color="white"/><stop offset="100%" stop-color="white"/></radialGradient>
+                <radialGradient id="db10" cx="35%" cy="35%"><stop offset="0%" stop-color="#ee2222"/><stop offset="70%" stop-color="#ee2222"/><stop offset="70.1%" stop-color="white"/><stop offset="100%" stop-color="white"/></radialGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div class="specs__list">
+          <div class="spec-item reveal-right">
+            <div class="spec-item__label">Rozmery (gauč)</div>
+            <div class="spec-item__value">230 × 95 × 85 cm</div>
+          </div>
+          <div class="spec-item reveal-right">
+            <div class="spec-item__label">Hracia plocha</div>
+            <div class="spec-item__value">210 × 110 cm</div>
+          </div>
+          <div class="spec-item reveal-right">
+            <div class="spec-item__label">Výška stola</div>
+            <div class="spec-item__value">78 cm (štandard)</div>
+          </div>
+          <div class="spec-item reveal-right">
+            <div class="spec-item__label">Hmotnosť</div>
+            <div class="spec-item__value">85 kg</div>
+          </div>
+          <div class="spec-item reveal-right">
+            <div class="spec-item__label">Materiál rámu</div>
+            <div class="spec-item__value">Masívny dub / kov</div>
+          </div>
+          <div class="spec-item reveal-right">
+            <div class="spec-item__label">Čalúnenie</div>
+            <div class="spec-item__value">Prémiová koža / látka</div>
+          </div>
+          <div class="spec-item reveal-right">
+            <div class="spec-item__label">Plstenie</div>
+            <div class="spec-item__value">Simonis 860 – profesionálne</div>
+          </div>
+          <div class="spec-item reveal-right">
+            <div class="spec-item__label">Nosnosť (gauč)</div>
+            <div class="spec-item__value">400 kg</div>
+          </div>
+          <div class="spec-item reveal-right">
+            <div class="spec-item__label">Čas transformácie</div>
+            <div class="spec-item__value">≤ 30 sekúnd</div>
+          </div>
+          <div class="spec-item reveal-right">
+            <div class="spec-item__label">Záruka</div>
+            <div class="spec-item__value">5 rokov</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== GALLERY ======================== -->
+  <section class="gallery" id="gallery">
+    <div class="section-header">
+      <p class="section-eyebrow">Galéria</p>
+      <h2 class="section-title">Elegancia v každom pohľade</h2>
+    </div>
+    <div class="gallery__track" id="galleryTrack">
+      <div class="gallery__item gallery__item--couch">
+        <div class="gallery__item-inner">
+          <div class="gallery__art gallery__art--1">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ga1bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f1729"/><stop offset="100%" stop-color="#1a2a4a"/></linearGradient>
+                <linearGradient id="ga1couch" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#3a5c94"/><stop offset="100%" stop-color="#1a2d4a"/></linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#ga1bg)"/>
+              <!-- Floor -->
+              <rect x="0" y="230" width="400" height="70" fill="rgba(255,255,255,0.03)"/>
+              <!-- Couch large -->
+              <rect x="40" y="120" width="320" height="100" rx="15" fill="url(#ga1couch)"/>
+              <rect x="55" y="95" width="135" height="70" rx="12" fill="#2d4a7a"/>
+              <rect x="210" y="95" width="135" height="70" rx="12" fill="#2d4a7a"/>
+              <rect x="40" y="45" width="320" height="80" rx="12" fill="#243d6b"/>
+              <rect x="10" y="85" width="45" height="100" rx="10" fill="#2d4a7a"/>
+              <rect x="345" y="85" width="45" height="100" rx="10" fill="#2d4a7a"/>
+              <rect x="60" y="218" width="16" height="30" rx="4" fill="#0d1a30"/>
+              <rect x="170" y="218" width="16" height="30" rx="4" fill="#0d1a30"/>
+              <rect x="214" y="218" width="16" height="30" rx="4" fill="#0d1a30"/>
+              <rect x="324" y="218" width="16" height="30" rx="4" fill="#0d1a30"/>
+              <!-- Ambient light -->
+              <ellipse cx="200" cy="280" rx="180" ry="18" fill="rgba(58,92,148,0.15)"/>
+            </svg>
+          </div>
+          <div class="gallery__item-label">Dizajnový gauč</div>
+        </div>
+      </div>
+      <div class="gallery__item gallery__item--transform">
+        <div class="gallery__item-inner">
+          <div class="gallery__art gallery__art--2">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ga2bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f1e1a"/><stop offset="100%" stop-color="#1a2e28"/></linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#ga2bg)"/>
+              <!-- Particle effects suggesting transformation -->
+              <circle cx="200" cy="150" r="80" fill="none" stroke="rgba(78,205,196,0.15)" stroke-width="1"/>
+              <circle cx="200" cy="150" r="110" fill="none" stroke="rgba(78,205,196,0.08)" stroke-width="1"/>
+              <circle cx="200" cy="150" r="140" fill="none" stroke="rgba(78,205,196,0.04)" stroke-width="1"/>
+              <!-- Half couch half billiard -->
+              <rect x="40" y="120" width="150" height="80" rx="12" fill="#2d4a7a" opacity="0.8"/>
+              <rect x="40" y="80" width="150" height="45" rx="10" fill="#243d6b" opacity="0.8"/>
+              <rect x="210" y="100" width="150" height="80" rx="8" fill="#1a7a3c" opacity="0.8"/>
+              <rect x="210" y="100" width="150" height="12" rx="4" fill="#4a2f17" opacity="0.8"/>
+              <!-- Arrow in center -->
+              <path d="M175 155 L225 155" stroke="#4ecdc4" stroke-width="3" stroke-linecap="round"/>
+              <path d="M215 148 L225 155 L215 162" fill="none" stroke="#4ecdc4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Glow -->
+              <ellipse cx="200" cy="155" rx="25" ry="20" fill="rgba(78,205,196,0.08)"/>
+            </svg>
+          </div>
+          <div class="gallery__item-label">Transformácia</div>
+        </div>
+      </div>
+      <div class="gallery__item gallery__item--billiard">
+        <div class="gallery__item-inner">
+          <div class="gallery__art gallery__art--3">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ga3bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a0f0a"/><stop offset="100%" stop-color="#2d1a0d"/></linearGradient>
+                <linearGradient id="ga3table" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#5c3a1e"/><stop offset="100%" stop-color="#3d2710"/></linearGradient>
+                <linearGradient id="ga3felt" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a7a3c"/><stop offset="100%" stop-color="#0d4a22"/></linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#ga3bg)"/>
+              <rect x="0" y="230" width="400" height="70" fill="rgba(255,255,255,0.02)"/>
+              <!-- Billiard table -->
+              <rect x="30" y="90" width="340" height="160" rx="12" fill="url(#ga3table)"/>
+              <rect x="50" y="110" width="300" height="120" rx="7" fill="url(#ga3felt)"/>
+              <rect x="30" y="90" width="340" height="16" rx="7" fill="#6b4424"/>
+              <rect x="30" y="234" width="340" height="16" rx="7" fill="#6b4424"/>
+              <rect x="30" y="90" width="20" height="160" rx="7" fill="#6b4424"/>
+              <rect x="350" y="90" width="20" height="160" rx="7" fill="#6b4424"/>
+              <!-- Pockets -->
+              <circle cx="52" cy="112" r="12" fill="#080808"/>
+              <circle cx="200" cy="100" r="10" fill="#080808"/>
+              <circle cx="348" cy="112" r="12" fill="#080808"/>
+              <circle cx="52" cy="238" r="12" fill="#080808"/>
+              <circle cx="200" cy="250" r="10" fill="#080808"/>
+              <circle cx="348" cy="238" r="12" fill="#080808"/>
+              <!-- Balls -->
+              <circle cx="260" cy="170" r="11" fill="white" opacity="0.95"/>
+              <circle cx="140" cy="155" r="11" fill="#ffee22"/>
+              <circle cx="165" cy="155" r="11" fill="#ee2222"/>
+              <circle cx="152" cy="138" r="11" fill="#2233ee"/>
+              <circle cx="128" cy="138" r="11" fill="#9911bb"/>
+              <circle cx="178" cy="138" r="11" fill="#ee6600"/>
+              <!-- Cue -->
+              <line x1="260" y1="170" x2="360" y2="100" stroke="#d4a553" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+              <!-- Ambient light -->
+              <ellipse cx="200" cy="275" rx="160" ry="15" fill="rgba(26,122,60,0.12)"/>
+            </svg>
+          </div>
+          <div class="gallery__item-label">Profesionálny stôl</div>
+        </div>
+      </div>
+      <div class="gallery__item gallery__item--living">
+        <div class="gallery__item-inner">
+          <div class="gallery__art gallery__art--4">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ga4bg" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0f0f1a"/><stop offset="100%" stop-color="#1a1a2e"/></linearGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#ga4bg)"/>
+              <!-- Room -->
+              <rect x="0" y="220" width="400" height="80" fill="rgba(255,255,255,0.03)"/>
+              <line x1="0" y1="220" x2="400" y2="220" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+              <!-- Wall decor -->
+              <rect x="50" y="30" width="80" height="60" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+              <rect x="270" y="30" width="80" height="60" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+              <!-- Small lamp glow -->
+              <ellipse cx="90" cy="80" rx="40" ry="20" fill="rgba(255,200,100,0.06)"/>
+              <ellipse cx="310" cy="80" rx="40" ry="20" fill="rgba(255,200,100,0.06)"/>
+              <!-- Couch in room -->
+              <rect x="60" y="155" width="280" height="75" rx="12" fill="#2d4a7a"/>
+              <rect x="72" y="138" width="120" height="55" rx="10" fill="#3a5c94"/>
+              <rect x="208" y="138" width="120" height="55" rx="10" fill="#3a5c94"/>
+              <rect x="60" y="100" width="280" height="60" rx="10" fill="#243d6b"/>
+              <rect x="30" y="130" width="40" height="80" rx="8" fill="#2d4a7a"/>
+              <rect x="330" y="130" width="40" height="80" rx="8" fill="#2d4a7a"/>
+              <!-- People silhouettes (simple) -->
+              <ellipse cx="140" cy="148" rx="14" ry="18" fill="rgba(255,255,255,0.07)"/>
+              <ellipse cx="260" cy="148" rx="14" ry="18" fill="rgba(255,255,255,0.07)"/>
+              <!-- Rug -->
+              <ellipse cx="200" cy="240" rx="150" ry="20" fill="rgba(58,92,148,0.08)" stroke="rgba(58,92,148,0.12)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="gallery__item-label">V obývačke</div>
+        </div>
+      </div>
+      <div class="gallery__item gallery__item--detail">
+        <div class="gallery__item-inner">
+          <div class="gallery__art gallery__art--5">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ga5bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a1208"/><stop offset="100%" stop-color="#2d1f0d"/></linearGradient>
+                <radialGradient id="ga5glow" cx="50%" cy="50%"><stop offset="0%" stop-color="rgba(212,165,83,0.2)"/><stop offset="100%" stop-color="rgba(212,165,83,0)"/></radialGradient>
+              </defs>
+              <rect width="400" height="300" fill="url(#ga5bg)"/>
+              <!-- Close-up mechanism detail -->
+              <circle cx="200" cy="150" r="70" fill="url(#ga5glow)"/>
+              <!-- Gear-like mechanism -->
+              <circle cx="200" cy="150" r="45" fill="none" stroke="rgba(212,165,83,0.4)" stroke-width="2"/>
+              <circle cx="200" cy="150" r="30" fill="none" stroke="rgba(212,165,83,0.3)" stroke-width="1.5"/>
+              <circle cx="200" cy="150" r="12" fill="rgba(212,165,83,0.3)"/>
+              <!-- Mechanism lines -->
+              <line x1="155" y1="150" x2="245" y2="150" stroke="rgba(212,165,83,0.4)" stroke-width="1.5"/>
+              <line x1="200" y1="105" x2="200" y2="195" stroke="rgba(212,165,83,0.4)" stroke-width="1.5"/>
+              <line x1="168" y1="118" x2="232" y2="182" stroke="rgba(212,165,83,0.3)" stroke-width="1"/>
+              <line x1="232" y1="118" x2="168" y2="182" stroke="rgba(212,165,83,0.3)" stroke-width="1"/>
+              <!-- Lock indicator -->
+              <path d="M188 145 L188 137 Q188 129 200 129 Q212 129 212 137 L212 145" fill="none" stroke="rgba(78,205,196,0.7)" stroke-width="2" stroke-linecap="round"/>
+              <rect x="183" y="144" width="34" height="22" rx="4" fill="rgba(78,205,196,0.25)" stroke="rgba(78,205,196,0.6)" stroke-width="1.5"/>
+              <!-- Label text -->
+              <text x="200" y="255" text-anchor="middle" fill="rgba(212,165,83,0.7)" font-size="12" font-family="Inter, sans-serif">Patentovaný mechanizmus</text>
+            </svg>
+          </div>
+          <div class="gallery__item-label">Detail mechanizmu</div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery__controls">
+      <button class="gallery__btn gallery__btn--prev" id="galleryPrev" aria-label="Predošlé">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="gallery__dots" id="galleryDots"></div>
+      <button class="gallery__btn gallery__btn--next" id="galleryNext" aria-label="Nasledujúce">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ======================== TESTIMONIALS ======================== -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Recenzie</p>
+        <h2 class="section-title">Čo hovorí naša komunita</h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card reveal-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"BilliCouch zmenil naše sobotné večery. Ráno gauč, večer turnaj – manžel a deti sú nadšení. Najlepší nákup za posledné roky!"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">MK</div>
+            <div>
+              <strong>Marta Kováčová</strong>
+              <span>Bratislava</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p>"Mal som obavy ohľadom kvality biliardovej plochy, ale po prvej hre som bol prekvapený. Hrá sa rovnako dobre ako na stolovom biliardi v klube."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">JN</div>
+            <div>
+              <strong>Ján Novák</strong>
+              <span>Košice</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal-card">
+          <div class="testimonial-card__stars">★★★★☆</div>
+          <p>"Dizajn je úžasný – naša obývačka vyzerá ako z katalógu. Transformácia je naozaj rýchla a jednoduchá. Odporúčam každému."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">PS</div>
+            <div>
+              <strong>Peter Sloboda</strong>
+              <span>Žilina</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== PRICING ======================== -->
+  <section class="pricing">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Modely a ceny</p>
+        <h2 class="section-title">Vyberte si svoj BilliCouch</h2>
+      </div>
+      <div class="pricing__grid">
+        <div class="pricing-card reveal-card">
+          <div class="pricing-card__badge">Základný</div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">2 490</span>
+            <span class="pricing-card__currency">€</span>
+          </div>
+          <div class="pricing-card__name">BilliCouch Classic</div>
+          <ul class="pricing-card__features">
+            <li>✓ Textilné čalúnenie (5 farieb)</li>
+            <li>✓ Hracia plocha 210×110 cm</li>
+            <li>✓ Standardné plstenie</li>
+            <li>✓ 2 biliardové tága</li>
+            <li>✓ Kompletná sada gúľ</li>
+            <li>✓ Záruka 2 roky</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">Predobjednať</a>
+        </div>
+        <div class="pricing-card pricing-card--featured reveal-card">
+          <div class="pricing-card__badge">Najpredávanejší</div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">3 490</span>
+            <span class="pricing-card__currency">€</span>
+          </div>
+          <div class="pricing-card__name">BilliCouch Pro</div>
+          <ul class="pricing-card__features">
+            <li>✓ Prémiová koža (8 farieb)</li>
+            <li>✓ Hracia plocha 210×110 cm</li>
+            <li>✓ Simonis 860 plstenie</li>
+            <li>✓ 4 profesionálne tága</li>
+            <li>✓ Kompletná sada + chalk</li>
+            <li>✓ Úložný priestor</li>
+            <li>✓ Záruka 5 rokov</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary">Predobjednať</a>
+        </div>
+        <div class="pricing-card reveal-card">
+          <div class="pricing-card__badge">Prémiový</div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">4 990</span>
+            <span class="pricing-card__currency">€</span>
+          </div>
+          <div class="pricing-card__name">BilliCouch Elite</div>
+          <ul class="pricing-card__features">
+            <li>✓ Ručne šitá koža (custom)</li>
+            <li>✓ Elektrická transformácia</li>
+            <li>✓ Simonis 860HR plstenie</li>
+            <li>✓ LED podsvietenie</li>
+            <li>✓ Bluetooth reproduktory</li>
+            <li>✓ Inštalácia zadarmo</li>
+            <li>✓ Doživotná záruka</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline">Predobjednať</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT ======================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__layout">
+        <div class="contact__info reveal-left">
+          <p class="section-eyebrow">Záujem o BilliCouch?</p>
+          <h2>Predregistrujte sa a získajte 10% zľavu</h2>
+          <p>Prví zákazníci získavajú exkluzívnu zľavu a prednostné dodanie. Vyplňte formulár a my vás budeme kontaktovať s ďalšími informáciami.</p>
+          <div class="contact__benefits">
+            <div class="contact__benefit">
+              <span class="contact__benefit-icon">🎁</span>
+              <span>10% zľava pre predregistrovaných</span>
+            </div>
+            <div class="contact__benefit">
+              <span class="contact__benefit-icon">🚚</span>
+              <span>Doručenie po celom Slovensku zadarmo</span>
+            </div>
+            <div class="contact__benefit">
+              <span class="contact__benefit-icon">🔧</span>
+              <span>Profesionálna montáž v cene</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact__form-wrap reveal-right">
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Meno a priezvisko</label>
+              <input type="text" id="name" name="name" placeholder="Ján Novák" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mailová adresa</label>
+              <input type="email" id="email" name="email" placeholder="jan@example.sk" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefónne číslo</label>
+              <input type="tel" id="phone" name="phone" placeholder="+421 9XX XXX XXX" />
+            </div>
+            <div class="form-group">
+              <label for="model">Záujem o model</label>
+              <select id="model" name="model">
+                <option value="">Vyberte model...</option>
+                <option value="classic">BilliCouch Classic – 2 490 €</option>
+                <option value="pro">BilliCouch Pro – 3 490 €</option>
+                <option value="elite">BilliCouch Elite – 4 990 €</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Správa (voliteľné)</label>
+              <textarea id="message" name="message" rows="3" placeholder="Vaša správa alebo otázka..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <span class="btn-text">Odoslať predregistráciu</span>
+              <span class="btn-icon">→</span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <span>✅</span>
+              Ďakujeme! Budeme vás kontaktovať čoskoro.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="nav__logo-icon">⬡</span>
+            BilliCouch
+          </div>
+          <p>Revolučný nábytok, ktorý spája pohodlie gauča s vzrušením biliardového stola.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Instagram" class="footer__social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook" class="footer__social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="footer__social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__links-group">
+          <h4>Produkt</h4>
+          <ul>
+            <li><a href="#features">Funkcie</a></li>
+            <li><a href="#how-it-works">Ako to funguje</a></li>
+            <li><a href="#specs">Parametre</a></li>
+            <li><a href="#gallery">Galéria</a></li>
+          </ul>
+        </div>
+        <div class="footer__links-group">
+          <h4>Spoločnosť</h4>
+          <ul>
+            <li><a href="#">O nás</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Press kit</a></li>
+            <li><a href="#">Kariéra</a></li>
+          </ul>
+        </div>
+        <div class="footer__links-group">
+          <h4>Podpora</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Záruka</a></li>
+            <li><a href="#">Servis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 BilliCouch s.r.o. Všetky práva vyhradené.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Ochrana súkromia</a>
+          <a href="#">Obchodné podmienky</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================== CURSOR GLOW ======================== -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
